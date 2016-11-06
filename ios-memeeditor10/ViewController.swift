@@ -38,6 +38,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func makeImage(_ sender: UIBarButtonItem) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            let destinationController = UIImagePickerController()
+            destinationController.delegate = self
+            destinationController.sourceType = UIImagePickerControllerSourceType.camera
+            destinationController.allowsEditing = false
+            self.present(destinationController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func shareImage(_ sender: UIBarButtonItem) {

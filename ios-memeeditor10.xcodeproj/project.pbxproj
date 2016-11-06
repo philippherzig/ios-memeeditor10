@@ -96,7 +96,7 @@
 				TargetAttributes = {
 					4A6146481DCF7B3800CE79CA = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 6UQUNT93NG;
+						DevelopmentTeam = B8RK76K25A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -259,7 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6UQUNT93NG;
+				DEVELOPMENT_TEAM = B8RK76K25A;
 				INFOPLIST_FILE = "ios-memeeditor10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ph.ios-memeeditor10";
@@ -272,7 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6UQUNT93NG;
+				DEVELOPMENT_TEAM = B8RK76K25A;
 				INFOPLIST_FILE = "ios-memeeditor10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ph.ios-memeeditor10";

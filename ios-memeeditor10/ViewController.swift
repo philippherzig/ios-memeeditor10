@@ -11,10 +11,14 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: Actions
 
     @IBAction func pickImage(_ sender: UIBarButtonItem) {
         let destinationController = UIImagePickerController()
@@ -28,7 +32,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func shareImage(_ sender: UIBarButtonItem) {
     }
     
-    // MARK: - UIImagePickerControllerDelegate Methods
+    // MARK: Delegate
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {

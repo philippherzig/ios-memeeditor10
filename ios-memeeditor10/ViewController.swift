@@ -48,6 +48,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func shareImage(_ sender: UIBarButtonItem) {
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let destinationController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        present(destinationController, animated: true, completion: nil)
     }
     
     // MARK: Image Picker Delegate

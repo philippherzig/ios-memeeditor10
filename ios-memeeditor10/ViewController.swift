@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func pickImage(_ sender: UIBarButtonItem) {
         let destinationController = UIImagePickerController()
+        destinationController.delegate = self
         present(destinationController, animated: true, completion: nil)
     }
     
@@ -23,6 +26,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func shareImage(_ sender: UIBarButtonItem) {
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate Methods
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
     }
 
 }
